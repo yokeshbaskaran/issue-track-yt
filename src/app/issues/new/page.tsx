@@ -33,8 +33,20 @@ const NewIssuePage = () => {
   const [error, setError] = useState<string>("");
   const [isSubmit, setIsSubmit] = useState(false);
 
+  const onSubmits = handleSubmit(async (data) => {
+    try {
+      setIsSubmit(true);
+      await axios.post("/api/issues", data);
+      router.push("/issues");
+    } catch (error) {
+      setIsSubmit(false);
+      console.log("post-error", error);
+      setError("An unexcepted error occured");
+    }
+  });
+
   return (
-    <div className="px-3 max-w-xl space-y-3">
+    <div>
       {/* callout when error  */}
       {error && (
         <Callout.Root color="red">
@@ -42,20 +54,7 @@ const NewIssuePage = () => {
         </Callout.Root>
       )}
 
-      <form
-        onSubmit={handleSubmit(async (data) => {
-          try {
-            setIsSubmit(true);
-            await axios.post("/api/issues", data);
-            router.push("/issues");
-          } catch (error) {
-            setIsSubmit(false);
-            console.log("post-error", error);
-            setError("An unexcepted error occured");
-          }
-        })}
-        className="space-y-3"
-      >
+      <form onSubmit={onSubmits} className="space-y-3">
         <TextField.Root size="2" placeholder="Title" {...register("title")} />
 
         <ErrorMessage>{errors.title?.message}</ErrorMessage>

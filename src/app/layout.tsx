@@ -32,7 +32,7 @@ export default function RootLayout({
         <Theme appearance="light" accentColor="violet">
           <Navbar />
 
-          <main>{children}</main>
+          <main className="px-3 max-w-xl space-y-3">{children}</main>
           <ThemePanel />
         </Theme>
       </body>
