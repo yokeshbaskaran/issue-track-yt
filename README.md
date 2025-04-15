@@ -10,3 +10,4 @@ Packages used:
 
 - react-icons
 - classNames (conditional)
+- zod (for schema validation)
