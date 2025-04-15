@@ -38,6 +38,12 @@ export default function Home() {
           <p>{issue.description}</p>
         </div>
       ))}
+
+      {issues.length === 0 && (
+        <div className="text-gray-500">
+          <p>No issue added yet!</p>
+        </div>
+      )}
     </div>
   );
 }
