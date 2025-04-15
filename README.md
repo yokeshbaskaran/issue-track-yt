@@ -1,4 +1,4 @@
-# Moments
+# Issue Track
 
 Packages used:
 
@@ -16,3 +16,7 @@ Packages used:
 - React Hook form
 - axios
 - hookform/resolvers
+
+## Set .env variables
+
+DATABASE_URL=
