@@ -15,3 +15,4 @@ Packages used:
 - React SimpleMDE (EasyMDE)
 - React Hook form
 - axios
+- hookform/resolvers
