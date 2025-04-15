@@ -11,3 +11,7 @@ Packages used:
 - react-icons
 - classNames (conditional)
 - zod (for schema validation)
+- radix UI
+- React SimpleMDE (EasyMDE)
+- React Hook form
+- axios
