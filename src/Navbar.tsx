@@ -36,6 +36,7 @@ const Navbar = () => {
               key={idx}
             >
               {nav.label}
+              {/* {nav.link} */}
             </Link>
           ))}
         </ul>
