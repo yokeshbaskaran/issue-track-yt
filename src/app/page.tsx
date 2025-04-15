@@ -1,23 +1,14 @@
+import Issue from "@/components/Issue";
 import Navbar from "@/Navbar";
-
-type UserData = {
-  name: string;
-  age?: number;
-};
+import { Theme } from "@radix-ui/themes";
 
 export default function Home() {
-  const user: UserData = {
-    name: "Yoki",
-    age: 20,
-  };
-
-  console.log("user", user);
-
   return (
     <>
-      <div>
+      <Theme>
         <Navbar />
-      </div>
+        <Issue />
+      </Theme>
     </>
   );
 }
